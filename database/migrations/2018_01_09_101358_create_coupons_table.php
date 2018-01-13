@@ -18,14 +18,13 @@ class CreateCouponsTable extends Migration
             $table->increments('id');
             $table->string('title')->unique();
             $table->string('code')->nullable();
-            $table->integer('category_id')->nullable();
-            $table->string('slug')->nullable();
-            $table->string('link_order')->nullable();
-//            $table->string('short_desc')->nullable();
+            $table->integer('type_id')->nullable();
+            $table->string('site_id')->nullable();
             $table->string('description')->nullable();
-            $table->integer('amount')->nullable();
             $table->dateTime('exp_date')->nullable();
             $table->string('thumb')->nullable();
+            $table->integer('views')->nullable();
+            $table->integer('total_active')->nullable();
             $table->timestamps();
         });
     }
