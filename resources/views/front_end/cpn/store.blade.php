@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="post-media text-center">
-                <a href="coupon-single.html"><img src="uploads/store.png" alt="" class="img-responsive"></a>
+                <a href="coupon-single.html"><img src="{{url('/')}}/uploads/store.png" alt="" class="img-responsive"></a>
                 <small><a href="#">Connect.com</a></small>
             </div>
             <!-- end media -->

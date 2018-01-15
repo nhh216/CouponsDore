@@ -8,4 +8,9 @@ class Site extends Model
 {
     //
     protected $table = 'sites';
+
+    public  function coupon()
+    {
+        return $this->hasMany('App\Models\Coupon');
+    }
 }

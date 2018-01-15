@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 
 class CategoriesSeeder extends Seeder
 {
@@ -14,49 +15,52 @@ class CategoriesSeeder extends Seeder
         public function run()
     {
         $catList=[
-//            [
-//                'id'=>'1',
-//                'name'=>'Danh Mục'
-//
-//            ],
-//            [
-//                'id'=>'2',
-//                'name'=>'Thương Hiệu'
-//            ],
-//                [
-//                    'id'=>'3',
-//                    'name'=>'Lazada',
-//                    'parent_id'=>'2'
-//                ],
-//                [
-//                    'id'=>'4',
-//                    'name'=>'Shopee',
-//                    'parent_id'=>'2'
-//                ],
-//                [
-//                    'id'=>'5',
-//                    'name'=>'Fpt Shop',
-//                    'parent_id'=>'2'
-//                ],
-//                [
-//                    'id'=>'6',
-//                    'name'=>'Yes24',
-//                    'parent_id'=>'2'
-//                ],
-//                [
-//                    'id'=>'7',
-//                    'name'=>'Tiki.vn',
-//                    'parent_id'=>'2'
-//                ],
-//                [
-//                    'id'=>'8',
-//                    'name'=>'Thế Giới Di Động',
-//                    'parent_id'=>'2'
-//                ],
-//
+            [
+                'id'=>'1',
+                'name'=>'Danh Mục'
+
+            ],
+
+                [
+                    'id'=>'9',
+                    'name'=>'Ẩm Thực',
+                    'parent_id'=>'1'
+                ],
+                [
+                    'id'=>'10',
+                    'name'=>'Công Nghệ',
+                    'parent_id'=>'1'
+                ],
+                [
+                    'id'=>'11',
+                    'name'=>'Gia Dụng',
+                    'parent_id'=>'1'
+                ],
+                [
+                    'id'=>'12',
+                    'name'=>'Mẹ và Bé',
+                    'parent_id'=>'1'
+                ],
+                [
+                    'id'=>'13',
+                    'name'=>'Thời Trang',
+                    'parent_id'=>'1'
+                ],
+                [
+                    'id'=>'14',
+                    'name'=>'Văn Phòng Phẩm',
+                    'parent_id'=>'1'
+                ],
+
 
 
         ];
+
+        $list = Category::all();
+        foreach($list as $val) {
+            $val->slug = str_slug($val->name, '-').'-'.$val->id;
+            $val->save();
+        }
 
         foreach ($catList as $value)
         {

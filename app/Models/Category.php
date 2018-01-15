@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     protected $table = 'categories';
+    protected $slug = array(
+        'build_from'=>'name',
+        'save_to'=>'slug'
+    );
 
     public static function getData(){
         return self::select()->where()->limit()->get();
@@ -25,5 +29,11 @@ class Category extends Model
             }
         }
         echo "</ul>";
+    }
+
+
+    public function coupon()
+    {
+        return $this->belongsToMany('App\Models\Coupon','category_coupon','category_id','coup');
     }
 }

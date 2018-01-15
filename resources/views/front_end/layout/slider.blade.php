@@ -3,7 +3,7 @@
     <div class="col-md-4 col-sm-4 col-xs-12">
         <div class="promobox">
             <div class="post-media">
-                <a href="categories.html"><img src="uploads/promo_01.png" alt="" class="img-responsive"></a>
+                <a href="categories.html"><img src="{{url('/')}}/uploads/promo_01.png" alt="" class="img-responsive"></a>
                 <div class="promo-desc">
                     <img src="uploads/small_01.png" alt="" class="alignleft img-thumbnail">
                     <h4><a href="#">Shop for Business</a></h4>
@@ -17,7 +17,7 @@
     <div class="col-md-4 col-sm-4 col-xs-12">
         <div class="promobox">
             <div class="post-media">
-                <a href="categories.html"><img src="uploads/promo_02.png" alt="" class="img-responsive"></a>
+                <a href="categories.html"><img src="{{url('/')}}/uploads/promo_02.png" alt="" class="img-responsive"></a>
 
                 <div class="promo-desc">
                     <img src="uploads/small_02.png" alt="" class="alignleft img-thumbnail">
@@ -32,7 +32,7 @@
     <div class="col-md-4 col-sm-4 col-xs-12">
         <div class="promobox">
             <div class="post-media">
-                <a href="categories.html"><img src="uploads/promo_03.png" alt="" class="img-responsive"></a>
+                <a href="categories.html"><img src="{{url('/')}}/uploads/promo_03.png" alt="" class="img-responsive"></a>
 
                 <div class="promo-desc">
                     <img src="uploads/small_03.png" alt="" class="alignleft img-thumbnail">

@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Coupon;
+use App\Models\Site;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 
@@ -8,8 +10,10 @@ class HomePageController extends Controller
 {
     public function home()
     {
-        $catList['catList'] = Category::all();
-        return view('front_end.pages.home.home',$catList);
+        $data['catList'] = Category::all();
+        $data['siteList'] = Site::all();
+        $coupons['listcoupons'] = Coupon::all();
+        return view('front_end.pages.home.home',$data,$coupons);
     }
 
     public function single_coupon()
@@ -17,12 +21,18 @@ class HomePageController extends Controller
         return view ('front_end.pages.coupons.coupon-single');
     }
 
-    public function showStore()
+    public function showStore($id)
     {
-        $catList['catList'] = Category::all();
-        return view ('front_end.pages.stores.store_single',$catList);
+        $data['catList'] = Category::all();
+        $data['siteList'] = Site::all();
+        $coupons['listcoupons'] = Coupon::getStoreNameByID($id);
+        return view ('front_end.pages.stores.store_single',$data,$coupons);
     }
 
+    public function db()
+    {
+
+    }
 
 }
 

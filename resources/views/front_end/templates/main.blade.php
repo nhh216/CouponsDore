@@ -11,7 +11,6 @@
     @includeWhen($homePage,'front_end.layout.store_populart')
     <div class="section wb">
         <div class="container">
-
             {{--Slider--}}
              @includeWhen([$hasSlider],'front_end.layout.slider')
             {{--Content--}}

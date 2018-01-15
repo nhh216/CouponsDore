@@ -1,3 +1,4 @@
+
 <div class="menu-wrapper ab-menu">
     <div class="container">
         <div class="hovermenu ttmenu menu-color">
@@ -25,11 +26,15 @@
                                 </li>
                             @endif
                         @endforeach
-                        <li><a href="coupons.html" title="">Coupons</a></li>
-                        <li><a href="printable.html" title="">Printable</a></li>
-                        <li><a href="categories.html" title="">Categories</a></li>
-                        <li><a href="stores.html" title="">Stores</a></li>
-                        <li><a href="blog.html" title="">Blog</a></li>
+
+                        <li class="dropdown hasmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down">Thương Hiệu</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                @foreach($siteList as $value)
+                                        <li><a href="{{$value->slug}}">{{$value->name}}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown hasmenu userpanel">

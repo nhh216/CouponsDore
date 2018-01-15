@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Models\Category;
 
 class CreateCategoriesTable extends Migration
 {
@@ -13,7 +14,7 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('categories');
+
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
@@ -24,6 +25,7 @@ class CreateCategoriesTable extends Migration
             $table->string('icon')->nullable();
             $table->timestamps();
         });
+
     }
 
     /**

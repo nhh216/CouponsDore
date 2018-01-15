@@ -12,10 +12,18 @@ class Coupon extends Model
         return self::select()->where()->limit()->get();
     }
 
-    public function Coupon_Category()
+    public static function getStoreNameByID($id)
+    {
+        return self::where('site_id',$id)->get();
+    }
+
+    public function category()
     {
         return $this->belongsToMany('App\Models\Category');
     }
 
-
+    public function site()
+    {
+        return $this->belongsTo('App\Models\Site');
+    }
 }
