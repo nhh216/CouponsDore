@@ -10,12 +10,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+                    <a class="navbar-brand" href="index.html"><img src="{{url('/')}}images/logo.png" alt=""></a>
                 </div><!-- end navbar-header -->
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a class="active" href="index.html" title="">Trang Chủ</a></li>
+                        <li><a class="active" href="{{url('/')}}" title="">Trang Chủ</a></li>
                         @foreach($catList as $item)
                             @if($item['parent_id']==0)
                                 <li class="dropdown hasmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down">{{$item['name']}}</span></a>
@@ -30,7 +30,7 @@
                         <li class="dropdown hasmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down">Thương Hiệu</span></a>
                             <ul class="dropdown-menu" role="menu">
                                 @foreach($siteList as $value)
-                                        <li><a href="{{$value->slug}}">{{$value->name}}</a></li>
+                                        <li><a href="{{url('/')}}/store/{{$value->slug}}">{{$value->name}}</a></li>
                                 @endforeach
                             </ul>
                         </li>

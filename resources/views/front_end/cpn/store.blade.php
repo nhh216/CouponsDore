@@ -1,3 +1,4 @@
+@foreach($storeInfo as $item)
 <div class="section wb">
     <div class="container">
         <div class="row">
@@ -7,8 +8,8 @@
     <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="post-media text-center">
-                <a href="coupon-single.html"><img src="{{url('/')}}/uploads/store.png" alt="" class="img-responsive"></a>
-                <small><a href="#">Connect.com</a></small>
+                <a href="coupon-single.html"><img src="{{url('/')}}/{{$item->logo}}" alt="" class="img-responsive"></a>
+                <small><a href="#">{{$item->homepage}}</a></small>
             </div>
             <!-- end media -->
         </div>
@@ -16,8 +17,8 @@
 
         <div class="col-md-8 col-sm-8 col-xs-12">
             <div class="coupon-meta">
-                <h3>Connect.com <small><a href="store-single.html"><i class="fa fa-rss"></i> Subscribe this Store</a></small></h3>
-                <p>You can add store description goes here. Lorem ipsum donec aliquam, urna quis ornare, tellus enim posuere est, vitae molestie felis odio in massa.</p>
+                <h2>{{$item->name}} <small><a href="store-single.html"><i class="fa fa-rss"></i>Theo Dõi</a></small></h2>
+                <p>{{$item->description}}</p>
             </div>
             <!-- end meta -->
 
@@ -37,5 +38,5 @@
     </div>
     <!-- end row -->
 </div>
-
+@endforeach
 <hr class="invis">

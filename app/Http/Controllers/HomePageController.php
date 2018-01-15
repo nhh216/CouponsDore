@@ -21,12 +21,13 @@ class HomePageController extends Controller
         return view ('front_end.pages.coupons.coupon-single');
     }
 
-    public function showStore($id)
-    {
+    public function showStore($name,$id)
+    {   echo $id;
         $data['catList'] = Category::all();
         $data['siteList'] = Site::all();
-        $coupons['listcoupons'] = Coupon::getStoreNameByID($id);
-        return view ('front_end.pages.stores.store_single',$data,$coupons);
+        $data['listcoupons'] = Coupon::getStoreNameByID($id);
+        $data['storeInfo'] = Site::getInfoStoreByID($id);
+        return view ('front_end.pages.stores.store_single',$data);
     }
 
     public function db()
