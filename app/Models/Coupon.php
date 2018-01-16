@@ -17,6 +17,11 @@ class Coupon extends Model
         return self::where('site_id',$id)->get();
     }
 
+    public static function getCoupon()
+    {
+        return self::select('id','title','thumb')->get();
+    }
+
     public function category()
     {
         return $this->belongsToMany('App\Models\Category');

@@ -59,8 +59,7 @@
     });
 
     // Ajax Search
-    var typeahead = {
-        typeaheadInit: function() {
+    var typeahead = { typeaheadInit: function() {
             var jsonData = [{
                 'id': 1,
                 'name': 'MyLogo.com',
