@@ -4,37 +4,25 @@
         <a href="user-submit.html">
             <i class="fa fa-bullhorn alignleft fa-3x"></i>
             <h4>Submit a Coupon</h4>
-            <p>Share your code discount's everyone</p>
-        </a>
-    </div><!-- end widget -->
+                    <p>Share your code discount's everyone</p>
+                    </a>
+                </div><!-- end widget -->
 
-    <div class="widget clearfix">
-        <div class="widget-title">
-            <h4><span>Best Coupons</span></h4>
-        </div>
+                <div class="widget clearfix">
+                    <a href="https://rutgon.me/12unAq"><img style="width: 100%;" src="{{asset('/')}}/uploads/banner.jpg"></a>
+                </div><!-- end widget -->
 
-        <div class="best-coupons">
-            <ul class="customlist">
-                <li><a href="#">MyLogo.com 10$ off for all orders</a></li>
-                <li><a href="#">44$ off CompanieNamis Discount</a></li>
-                <li><a href="#">10% Discount Coupon from Gosi</a></li>
-                <li><a href="#">Free Shipping for All Orders</a></li>
-                <li><a href="#">$5 for for your next logo design</a></li>
-            </ul>
-        </div>
-    </div><!-- end widget -->
+                <div class="widget clearfix">
+                    <div class="featured hidden-xs"><i class="fa fa-star-o"></i></div>
+                    <div class="widget-title">
+                        <h4><span>Best Stores</span></h4>
+                    </div>
 
-    <div class="widget clearfix">
-        <div class="featured hidden-xs"><i class="fa fa-star-o"></i></div>
-        <div class="widget-title">
-            <h4><span>Best Stores</span></h4>
-        </div>
-
-        <div class="text-center store-list row">
-            <div class="col-md-6 col-xs-6">
-                <div class="post-media">
-                    <a href="coupon-single.html"><img src="{{url('/')}}/uploads/store_01.jpg" alt="" class="img-responsive"></a>
-                    <small>Takifest.com</small>
+                    <div class="text-center store-list row">
+                        <div class="col-md-6 col-xs-6">
+                            <div class="post-media">
+                                <a href="coupon-single.html"><img src="{{url('/')}}/uploads/store_01.jpg" alt="" class="img-responsive"></a>
+                                <small>Takifest.com</small>
                 </div>
                 <!-- end media -->
             </div>

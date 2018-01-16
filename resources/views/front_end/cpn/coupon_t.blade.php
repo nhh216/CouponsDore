@@ -10,6 +10,8 @@
                 </div><!-- end col -->
                 <div class="col-md-8 col-sm-8 col-xs-12">
                     <div class="coupon-meta">
+
+                        <h4><a href="coupon-single.html">{{$coupon->title}}</a></h4>
                         <div class="coupon-top clearfix">
                             <div class="rating pull-left">
                                 <i class="fa fa-star"></i>
@@ -24,7 +26,6 @@
                                 <a href="coupon-favorites.html" data-toggle="tooltip" data-placement="bottom" title="Favorite"><i class="fa fa-heart-o"></i></a>
                             </div>
                         </div><!-- end coupon-top -->
-                        <h4><a href="coupon-single.html">{{$coupon->title}}</a></h4>
                         <p>{{$coupon->description}}</p>
                     </div><!-- end meta -->
 

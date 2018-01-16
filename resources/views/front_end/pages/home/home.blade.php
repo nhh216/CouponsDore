@@ -1,4 +1,4 @@
-@extends('front_end.templates.main',['hasSlider'=>false,'homePage'=>true])
+@extends('front_end.templates.main',['hasSlider'=>true,'homePage'=>true])
 @section('title','Tiêu Đề')
 @section('content')
     @include('front_end.cpn.coupon')

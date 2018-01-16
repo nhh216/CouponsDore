@@ -12,7 +12,7 @@
     <div class="section wb">
         <div class="container">
             {{--Slider--}}
-             @includeWhen([$hasSlider],'front_end.layout.slider')
+             @includeWhen($hasSlider,'front_end.layout.slider')
             {{--Content--}}
             @yield('content')
             {{-- Sidebar--}}
