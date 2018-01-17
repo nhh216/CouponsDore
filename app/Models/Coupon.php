@@ -17,14 +17,13 @@ class Coupon extends Model
         return self::select('id','title','thumb')->where('title','like','%'.$str.'%')->get();
     }
 
-<<<<<<< HEAD
+
     public static function getStoreNameByID($id)
     {
         return self::where('site_id',$id)->get();
     }
 
-=======
->>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4
+
     public function category()
     {
         return $this->belongsToMany('App\Models\Category');
