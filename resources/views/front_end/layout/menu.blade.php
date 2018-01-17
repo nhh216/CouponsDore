@@ -10,7 +10,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="{{url('/')}}images/logo.png" alt=""></a>
+                    <a class="navbar-brand" href="index.html"><img src="{{asset('/')}}images/logo.png" alt=""></a>
                 </div><!-- end navbar-header -->
 
                 <div class="navbar-collapse collapse">

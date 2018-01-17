@@ -10,6 +10,7 @@
                     <small>128 Available Coupons</small>
                 </div><!-- end desc -->
             </div><!-- end media -->
+
         </div><!-- end box -->
     </div><!-- end col -->
 

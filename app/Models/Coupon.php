@@ -12,14 +12,14 @@ class Coupon extends Model
         return self::select()->where()->limit()->get();
     }
 
+    public static function searchCoupon($str)
+    {
+        return self::select('id','title','thumb')->where('title','like','%'.$str.'%')->get();
+    }
+
     public static function getStoreNameByID($id)
     {
         return self::where('site_id',$id)->get();
-    }
-
-    public static function getCoupon()
-    {
-        return self::select('id','title','thumb')->get();
     }
 
     public function category()

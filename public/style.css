@@ -1419,6 +1419,7 @@ li.dropdown.userpanel a.dropdown-toggle {
 .sidebar .widget {
     background-color: #ffffff;
     border: 1px solid #f0efef;
+    padding: 30px;
     position: relative;
     margin-bottom: 30px;
 }
@@ -2697,7 +2698,7 @@ input.styled[type="radio"]:checked + label::after {
 }
 
 .first-section {
-    padding: 10em 0 5em;
+    padding: 15em 0 5em;
 }
 
 .first-section .store-list small,
