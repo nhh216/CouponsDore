@@ -16,5 +16,4 @@ Route::get('/','HomePageController@home');
 Route::get('/store/{name}-{id}','HomePageController@showStore');
 Route::get('/coupon-single.html','HomePageController@Single_coupon');
 Route::get('/store','HomePageController@showStore');
-Route::get('/craw', 'HomePageController@crawl');
-Route::get('/search', 'SearchController@index');
+Route::get('/db', 'HomePageController@db');

@@ -2698,7 +2698,7 @@ input.styled[type="radio"]:checked + label::after {
 }
 
 .first-section {
-    padding: 10em 0 5em;
+    padding: 15em 0 5em;
 }
 
 .first-section .store-list small,
