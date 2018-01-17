@@ -24,7 +24,7 @@ class HomePageController extends Controller
     }
 
     public function showStore($name,$id)
-    {
+    {   echo $id;
         $data['catList'] = Category::all();
         $data['siteList'] = Site::all();
         $data['listcoupons'] = Coupon::getStoreNameByID($id);

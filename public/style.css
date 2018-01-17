@@ -1419,6 +1419,7 @@ li.dropdown.userpanel a.dropdown-toggle {
 .sidebar .widget {
     background-color: #ffffff;
     border: 1px solid #f0efef;
+    padding: 30px;
     position: relative;
     margin-bottom: 30px;
 }
