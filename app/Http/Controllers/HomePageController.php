@@ -22,7 +22,7 @@ class HomePageController extends Controller
     }
 
     public function showStore($name,$id)
-    {
+    {   echo $id;
         $data['catList'] = Category::all();
         $data['siteList'] = Site::all();
         $data['listcoupons'] = Coupon::getStoreNameByID($id);
@@ -30,6 +30,7 @@ class HomePageController extends Controller
         return view ('front_end.pages.stores.store_single',$data);
     }
 
+<<<<<<< HEAD
     public function autocomplete (\Illuminate\Http\Request $request)
     {
          $term=$request->term;
@@ -48,6 +49,12 @@ class HomePageController extends Controller
         return response()->json($result);
     }
 
+=======
+    public function db()
+    {
+
+    }
+>>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4
 
 }
 

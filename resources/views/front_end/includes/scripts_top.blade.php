@@ -8,9 +8,12 @@
 <meta name="keywords" content="">
 
 <!-- FAVICONS -->
+<<<<<<< HEAD
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+=======
+>>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4
 <link rel="shortcut icon" href="{{url ('/') }}/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="{{url ('/') }}/images/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="57x57" href="{{url ('/') }}/images/apple-touch-icon-57x57.png">
@@ -31,6 +34,7 @@
 <link rel="stylesheet" type="text/css" href="{{url ('/') }}/css/colors.css">
 <!-- CUSTOM STYLES -->
 <link rel="stylesheet" type="text/css" href="{{url ('/') }}/css/custom.css">
+<<<<<<< HEAD
 
 <!-- AUTOCOMPLETE WITH JS
 <link href="{{ asset('/')}}vendor/selectize/css/selectize.bootstrap3.css" rel="stylesheet">
@@ -38,6 +42,8 @@
 <script type="text/javascript" src="{{ asset('/')}}vendor/selectize/js/standalone/selectize.min.js" ></script>
 -->
 
+=======
+>>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4
 
 <!--[if lt IE 9]>
 
@@ -55,6 +61,7 @@
 
 <!-- Style switcher -->
 <link href="{{url ('/') }}/switcher/switcher.css" rel="stylesheet">
+<<<<<<< HEAD
 
 <script>
     $( function() {
@@ -64,3 +71,5 @@
         });
     } );
 </script>
+=======
+>>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4
