@@ -3,12 +3,12 @@
 <head>
     <title> DORE || {{ $title or '' }}</title>
     @include('front_end.includes.scripts_top')
+    @include('front_end.includes.scripts_search')
     @stack('head')
 </head>
 <body>
     @include('front_end.layout.header_home_content')
-    @includeWhen($homePage,'front_end.layout.search')
-    @includeWhen($homePage,'front_end.layout.store_populart')
+
     <div class="section wb">
         <div class="container">
             {{--Slider--}}

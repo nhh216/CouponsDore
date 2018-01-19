@@ -1,15 +1,17 @@
 <div class="coupon-tab post-wrapper nopadtop clearfix">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs custom-tab-nav" role="tablist">
-        <li role="presentation" class="active"><a href="#activecoupons" aria-controls="activecoupons" role="tab" data-toggle="tab">Active Coupons</a></li>
-        <li role="presentation"><a href="#unreliablecoupons" aria-controls="unreliablecoupons" role="tab" data-toggle="tab">Unreliable Coupons</a></li>
-        <li role="presentation"><a href="#printablecoupons" aria-controls="printablecoupons" role="tab" data-toggle="tab">Printable Coupons</a></li>
+        <li role="presentation" class="active"><a href="#activecoupons" aria-controls="activecoupons" role="tab" data-toggle="tab">Tất Cả</a></li>
+        <li role="presentation"><a href="#unreliablecoupons" aria-controls="unreliablecoupons" role="tab" data-toggle="tab">Mới Nhất</a></li>
+        <li role="presentation"><a href="#printablecoupons" aria-controls="printablecoupons" role="tab" data-toggle="tab">Dùng Nhiều</a></li>
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active" id="activecoupons">
+
          @include('front_end.cpn.coupon_t')
+
         </div>
         <div role="tabpanel" class="tab-pane fade" id="unreliablecoupons">
 
@@ -18,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-12">
                             <div class="post-media text-center">
-                                <a href="coupon-single.html"><img src="uploads/store.png" alt="" class="img-responsive"></a>
+                                <a href="coupon-single.html"><img src="{{asset('/')}}uploads/store.png" alt="" class="img-responsive"></a>
                                 <small><a href="#">Visit Store</a></small>
                             </div>
                             <!-- end media -->
@@ -47,7 +49,7 @@
                             <!-- end meta -->
 
                             <div class="showcode">
-                                <a href="#" class="code-link" data-ex-link="http://themeforest.net/">
+                                <a href="#" class="code-link" data-ex-link="{{asset('/')}}">
                                     <span class="coupon-code">2016TATILRA29</span>
                                     <span class="show-code">Show Code</span>
                                 </a>
@@ -75,9 +77,9 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <a href="store-single.html"><img src="uploads/store_05.jpg" alt="" class="img-responsive"></a>
+                                            <a href="store-single.html"><img src="{{asset('/')}}/uploads/store_05.jpg" alt="" class="img-responsive"></a>
                                             <div class="modal-button">
-                                                <a href="http://themeforest.net/" target="_blank" title="" class="btn btn-default btn-block">Visit Store <i class="fa fa-angle-right"></i></a>
+                                                <a href="{{asset('/')}}/" target="_blank" title="" class="btn btn-default btn-block">Visit Store <i class="fa fa-angle-right"></i></a>
                                             </div>
                                         </div>
                                         <!-- end col -->
@@ -155,7 +157,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-12">
                             <div class="post-media text-center">
-                                <a href="coupon-single.html"><img src="uploads/store.png" alt="" class="img-responsive"></a>
+                                <a href="coupon-single.html"><img src="{{asset('/')}}/uploads/store.png" alt="" class="img-responsive"></a>
                                 <small><a href="#">Visit Store</a></small>
                             </div>
                             <!-- end media -->
@@ -184,7 +186,7 @@
                             <!-- end meta -->
 
                             <div class="showcode">
-                                <a href="#" class="code-link" data-ex-link="http://themeforest.net/">
+                                <a href="#" class="code-link" data-ex-link="{{asset('/')}}/">
                                     <span class="coupon-code">2016TATILRAAA</span>
                                     <span class="show-code">Show Code</span>
                                 </a>
@@ -212,7 +214,7 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <a href="store-single.html"><img src="uploads/store_06.jpg" alt="" class="img-responsive"></a>
+                                            <a href="store-single.html"><img src="{{asset('/')}}/uploads/store_06.jpg" alt="" class="img-responsive"></a>
                                             <div class="modal-button">
                                                 <a href="http://themeforest.net/" target="_blank" title="" class="btn btn-default btn-block">Visit Store <i class="fa fa-angle-right"></i></a>
                                             </div>
@@ -292,7 +294,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-12">
                             <div class="post-media text-center">
-                                <a href="coupon-single.html"><img src="uploads/store.png" alt="" class="img-responsive"></a>
+                                <a href="coupon-single.html"><img src="{{asset('/')}}/uploads/store.png" alt="" class="img-responsive"></a>
                                 <small><a href="#">Visit Store</a></small>
                             </div>
                             <!-- end media -->
@@ -349,7 +351,7 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <a href="store-single.html"><img src="uploads/store_07.jpg" alt="" class="img-responsive"></a>
+                                            <a href="store-single.html"><img src="{{asset('/')}}/uploads/store_07.jpg" alt="" class="img-responsive"></a>
                                             <div class="modal-button">
                                                 <a href="http://themeforest.net/" target="_blank" title="" class="btn btn-default btn-block">Visit Store <i class="fa fa-angle-right"></i></a>
                                             </div>
@@ -450,7 +452,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-12">
                             <div class="post-media text-center">
-                                <a href="coupon-single.html"><img src="uploads/store.png" alt="" class="img-responsive"></a>
+                                <a href="coupon-single.html"><img src="{{asset('/')}}/uploads/store.png" alt="" class="img-responsive"></a>
                                 <small><a href="store-single.html">View Store Coupons</a></small>
                             </div>
                             <!-- end media -->
@@ -506,7 +508,7 @@
                                 <div class="modal-body">
                                     <div class="row bgcolor text-center">
                                         <div class="col-md-8 col-md-offset-2">
-                                            <a class="coupon-code btn btn-primary btn-block" href="#" title="Click to Copy"><img src="uploads/print.png" alt="" class="img-responsive"></a>
+                                            <a class="coupon-code btn btn-primary btn-block" href="#" title="Click to Copy"><img src="{{asset('/')}}/uploads/print.png" alt="" class="img-responsive"></a>
 
                                             <a href="http://themeforest.net/" target="_blank" title="" class="btn btn-default">Print Code <i class="fa fa-print"></i></a>
                                         </div>
@@ -545,6 +547,5 @@
             </div><!-- end coupon list -->
         </div>
     </div>
-</div>
 </div>
 <!-- end content -->

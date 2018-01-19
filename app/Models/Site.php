@@ -14,6 +14,10 @@ class Site extends Model
         return self::where('id',$id)->get();
     }
 
+    public static function getStoreByKeySearch($str)
+    {
+        return self::select('id','name','logo','slug')->where('name','like','%'.$str.'%')->get();
+    }
     public  function coupon()
     {
         return $this->hasMany('App\Models\Coupon');

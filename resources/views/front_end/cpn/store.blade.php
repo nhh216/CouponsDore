@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="post-media text-center">
-                <a href="coupon-single.html"><img src="{{url('/')}}/{{$item->logo}}" alt="" class="img-responsive"></a>
+                <a href="coupon-single.html"><img src="{{asset('/').$item->logo}}" alt="" class="img-responsive"></a>
                 <small><a href="#">{{$item->homepage}}</a></small>
             </div>
             <!-- end media -->

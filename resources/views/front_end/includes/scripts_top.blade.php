@@ -8,12 +8,10 @@
 <meta name="keywords" content="">
 
 <!-- FAVICONS -->
-<<<<<<< HEAD
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-=======
->>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4
 <link rel="shortcut icon" href="{{url ('/') }}/images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="{{url ('/') }}/images/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="57x57" href="{{url ('/') }}/images/apple-touch-icon-57x57.png">
@@ -23,7 +21,6 @@
 <link rel="apple-touch-icon" sizes="120x120" href="{{url ('/') }}/images/apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" sizes="144x144" href="{{url ('/') }}/images/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="{{url ('/') }}/images/apple-touch-icon-152x152.png">
-
 <!-- BOOTSTRAP STYLES -->
 <link rel="stylesheet" type="text/css" href="{{url ('/') }}/css/bootstrap.min.css">
 <!-- TEMPLATE STYLES -->
@@ -34,21 +31,8 @@
 <link rel="stylesheet" type="text/css" href="{{url ('/') }}/css/colors.css">
 <!-- CUSTOM STYLES -->
 <link rel="stylesheet" type="text/css" href="{{url ('/') }}/css/custom.css">
-<<<<<<< HEAD
-
-<!-- AUTOCOMPLETE WITH JS
-<link href="{{ asset('/')}}vendor/selectize/css/selectize.bootstrap3.css" rel="stylesheet">
-<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="{{ asset('/')}}vendor/selectize/js/standalone/selectize.min.js" ></script>
--->
-
-=======
->>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4
-
 <!--[if lt IE 9]>
-
 <![endif]-->
-
 <!-- Skin Examples -->
 <link rel="alternate stylesheet" type="text/css" href="{{url ('/') }}/css/skins/skin1.css" title="skin1" media="all" />
 <link rel="alternate stylesheet" type="text/css" href="{{url ('/') }}/css/skins/skin2.css" title="skin2" media="all" />
@@ -61,15 +45,5 @@
 
 <!-- Style switcher -->
 <link href="{{url ('/') }}/switcher/switcher.css" rel="stylesheet">
-<<<<<<< HEAD
 
-<script>
-    $( function() {
 
-        $("#typeahead_01").autocomplete({
-            source: 'http://magiamgia.vip/autocomplete'
-        });
-    } );
-</script>
-=======
->>>>>>> 559a308ed042829c4040eb57a88035b289da6cc4

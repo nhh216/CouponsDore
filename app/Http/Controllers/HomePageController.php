@@ -22,7 +22,7 @@ class HomePageController extends Controller
     }
 
     public function showStore($name,$id)
-    {   echo $id;
+    {
         $data['catList'] = Category::all();
         $data['siteList'] = Site::all();
         $data['listcoupons'] = Coupon::getStoreNameByID($id);
@@ -34,7 +34,7 @@ class HomePageController extends Controller
     public function autocomplete (\Illuminate\Http\Request $request)
     {
          $term=$request->term;
-         $data = Coupon::searchCoupon($term);
+         $data = Site::getStoreByKeySearch($term);
          if(count($data)==0)
          {
                 return 'Không có kết quả!!!!';
@@ -43,17 +43,19 @@ class HomePageController extends Controller
          foreach ($data as $key => $v){
             $result[]=[
                 'id'=>$v->id,
-                'value' =>$v->title
+                'name' =>$v->name,
+                'logo'=>$v->logo,
+                'slug'=>$v->slug
             ];
         }
         return response()->json($result);
     }
-
-
-    public function db()
+    public function test()
     {
-
+        $data = Site::getStoreByKeySearch('lazada');
+        dd($data);
     }
+
 
 
 }

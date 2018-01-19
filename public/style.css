@@ -45,7 +45,10 @@
 /******************************************
     STARTUP
 ******************************************/
+* {
+    font-family: 'Alegreya Sans', sans-serif;
 
+}
 body {
     color: #999;
     font-size: 15px;
@@ -59,16 +62,18 @@ body.boxed #wrapper {
 }
 
 a {
-    color: #212121;
+    color: #210d14;
     text-decoration: none !important;
     outline: none !important;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
-
+.li-search a:hover {
+    background-color: #FFFFFF;
+}
 h1,
 h2,
 h3,
@@ -886,8 +891,8 @@ a img.aligncenter {
 
 .well .dropdown-menu li a,
 .navbar-default .dropdown-menu li a {
-    border-bottom: 1px solid #f0efef;
-    color: #767676 !important;
+
+    color: #0f0f0f !important;
     font-size: 13px;
     font-weight: 400;
     padding: 9px 20px;
@@ -970,6 +975,7 @@ li.dropdown.userpanel a.dropdown-toggle {
     border-left: 1px solid #f0efef;
     border-bottom: 0 solid #f0efef;
     border-right: 1px solid #f0efef;
+    font-family: 'Risque', cursive;
     box-shadow: none !important;
 }
 
@@ -1015,8 +1021,9 @@ li.dropdown.userpanel a.dropdown-toggle {
 }
 
 .ttmenu .navbar-default .dropdown-menu {
-    left: auto;
-    right: auto;
+    /*left: auto;*/
+    /*right: auto;*/
+    width: 75%;
     background-color: #ffffff !important
 }
 
@@ -1417,7 +1424,7 @@ li.dropdown.userpanel a.dropdown-toggle {
 ******************************************/
 
 .sidebar .widget {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border: 1px solid #f0efef;
     padding: 30px;
     position: relative;
@@ -2140,7 +2147,7 @@ hr.invis3 {
 }
 
 .tab-content .coupon-wrapper {
-    background-color: #ffffff;
+    background-color: #f3f6f9;
     border: 1px solid #f0efef;
     box-shadow: none;
     display: block;
@@ -2505,9 +2512,10 @@ small {
 }
 
 .coupon-wrapper {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 20px;
     border: 1px solid #f0efef;
+    box-shadow: 5px 5px #929292;
     display: block;
 }
 
@@ -2669,7 +2677,7 @@ small {
 
 .section.wb,
 .well {
-    background-color: #ffffff !important;
+    background-color: #f8f9f9 !important;
 }
 
 .well label a,
@@ -2698,7 +2706,7 @@ input.styled[type="radio"]:checked + label::after {
 }
 
 .first-section {
-    padding: 15em 0 5em;
+    padding: 5em 0 5em;
 }
 
 .first-section .store-list small,
@@ -2722,12 +2730,13 @@ input.styled[type="radio"]:checked + label::after {
 .ab-menu {
     position: absolute;
     z-index: 10;
-    padding: 40px 0px 0;
+    padding: 15px 0px 0;
     left: 0;
     right: 0;
     border: 0 !important;
+    height: 70px;
     width: 100%;
-    background-color: transparent;
+    background-color: #00acd6;
 }
 
 .ab-menu .container {
@@ -2760,4 +2769,13 @@ input.styled[type="radio"]:checked + label::after {
     font-weight: 300;
     font-size: 52px;
     text-transform: capitalize;
+}
+.li-search {
+    border-radius: 10px;
+}
+.dropdown-menu-2 {
+    display: inline-block;
+    width: 30%;
+    margin-right: 15px;
+    margin-left: 10px;
 }

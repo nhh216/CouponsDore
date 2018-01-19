@@ -14,7 +14,7 @@ class Coupon extends Model
 
     public static function searchCoupon($str)
     {
-        return self::select('id','title','thumb')->where('title','like','%'.$str.'%')->get();
+        return self::select('id','title','code')->where('title','like','%'.$str.'%')->get();
     }
 
 
