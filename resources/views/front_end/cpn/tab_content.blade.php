@@ -3,7 +3,6 @@
     <ul class="nav nav-tabs custom-tab-nav" role="tablist">
         <li role="presentation" class="active"><a href="#activecoupons" aria-controls="activecoupons" role="tab" data-toggle="tab">Tất Cả</a></li>
         <li role="presentation"><a href="#unreliablecoupons" aria-controls="unreliablecoupons" role="tab" data-toggle="tab">Mới Nhất</a></li>
-        <li role="presentation"><a href="#printablecoupons" aria-controls="printablecoupons" role="tab" data-toggle="tab">Dùng Nhiều</a></li>
     </ul>
 
     <!-- Tab panes -->
@@ -425,127 +424,9 @@
                 <!-- end coupon-wrapper -->
             </div>
             <!-- end coupon list -->
-
-            <nav class="nav-pagi">
-                <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div role="tabpanel" class="tab-pane fade" id="printablecoupons">
-            <div class="coupon-list list-wrapper">
-                <div class="coupon-wrapper">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <div class="post-media text-center">
-                                <a href="coupon-single.html"><img src="{{asset('/')}}/uploads/store.png" alt="" class="img-responsive"></a>
-                                <small><a href="store-single.html">View Store Coupons</a></small>
-                            </div>
-                            <!-- end media -->
-                        </div>
-                        <!-- end col -->
-
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                            <div class="coupon-meta">
-                                <div class="coupon-top clearfix">
-                                    <div class="rating pull-left">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <small>21 Rating</small>
-                                    </div>
-                                    <div class="favorite-coupon pull-right text-right">
-                                        <a href="coupon-favorites.html" data-toggle="tooltip" data-placement="bottom" title="Favorite"><i class="fa fa-heart-o"></i></a>
-                                    </div>
-                                </div>
-                                <!-- end coupon-top -->
-                                <h3><a href="coupon-single.html">MyLogo.com 10$ off Printable Coupon</a></h3>
-                                <p>Win tablet pc discount on your MyLogo com shopping plus free... Lorem ipsum dolor sit amet adipisicing elit, sed do eiolore consectetur.</p>
-                            </div>
-                            <!-- end meta -->
-
-                            <div class="showcode">
-                                <a href="#" class="code-link" data-ex-link="http://themeforest.net/">
-                                    <span class="coupon-code"></span>
-                                    <span class="show-code print-code"><i class="fa fa-print"></i> Print Coupon</span>
-                                </a>
-                            </div>
-                            <!-- end showcode -->
-
-                            <div class="coupon-bottom clearfix">
-                                <small class="pull-left">Expire : 21/07/2016</small>
-                            </div>
-                            <!-- end coupon-top -->
-                        </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->
-
-                    <!-- Modal -->
-                    <div id="code_id_14" class="modal fade code-modal print-modal">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4><a href="coupon-single.html">MyLogo.com 10$ off Printable Coupon</a></h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row bgcolor text-center">
-                                        <div class="col-md-8 col-md-offset-2">
-                                            <a class="coupon-code btn btn-primary btn-block" href="#" title="Click to Copy"><img src="{{asset('/')}}/uploads/print.png" alt="" class="img-responsive"></a>
-
-                                            <a href="http://themeforest.net/" target="_blank" title="" class="btn btn-default">Print Code <i class="fa fa-print"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end modal-body -->
-
-                                <div class="modal-footer">
-                                    <div class="coupon-area">
-                                        <div class="clearfix">
-                                            <div class="pull-left">
-                                                <div class="coupon-vote">
-                                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Work!"><i class="fa fa-smile-o"></i></a>
-                                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Poor!"><i class="fa fa-frown-o"></i></a>
-                                                </div>
-                                                <!-- end coupon-meta -->
-                                            </div>
-                                            <!-- end col -->
-
-                                            <div class="pull-right">
-                                                <div class="clearfix">
-                                                    <ul class="list-inline social-small">
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                    </ul>
-                                                </div><!-- end share -->
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                    </div><!-- end coupon-area -->
-                                </div><!-- end modal-footer -->
-                            </div><!-- end mpdal-content -->
-                        </div><!-- end modal-dialog -->
-                    </div><!-- end modal -->
-                </div><!-- end coupon-wrapper -->
-            </div><!-- end coupon list -->
         </div>
     </div>
+</div>
+
 </div>
 <!-- end content -->

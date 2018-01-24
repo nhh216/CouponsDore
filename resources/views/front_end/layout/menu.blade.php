@@ -12,7 +12,7 @@
                                 <li class="dropdown hasmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down">{{$item['name']}}</span></a>
                                     <ul class="dropdown-menu" role="menu">
                                         {{ subMenu($catList,$item['id']) }}
-                                        <li class="dropdown-menu-2" ><a href="store-single.html">Store Single 2 </a></li>
+
                                     </ul>
                                 </li>
                             @endif

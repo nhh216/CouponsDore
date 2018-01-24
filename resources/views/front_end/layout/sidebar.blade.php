@@ -1,4 +1,3 @@
-
 <div class="sidebar col-md-4 col-sm-12" style="float: right;">
     <div class="widget custom-widget clearfix">
         <a href="user-submit.html">
@@ -8,20 +7,8 @@
         </a>
     </div><!-- end widget -->
 
-    <div class="widget clearfix">
-        <div class="widget-title">
-            <h4><span>Best Coupons</span></h4>
-        </div>
-
-        <div class="best-coupons">
-            <ul class="customlist">
-                <li><a href="#">MyLogo.com 10$ off for all orders</a></li>
-                <li><a href="#">44$ off CompanieNamis Discount</a></li>
-                <li><a href="#">10% Discount Coupon from Gosi</a></li>
-                <li><a href="#">Free Shipping for All Orders</a></li>
-                <li><a href="#">$5 for for your next logo design</a></li>
-            </ul>
-        </div>
+    <div class="widget clearfix" style="padding: 0;">
+        <a href="https://rutgon.me/d1ucJR"><img style="height: 100%; width: 100%;" src="https://img.masoffer.net/images/public_html/cdn.masoffer.net/stg/kmpro/2018/1515988467_14081_300x600.jpg"/></a>
     </div><!-- end widget -->
 
     <div class="widget clearfix">

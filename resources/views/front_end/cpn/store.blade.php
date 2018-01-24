@@ -1,6 +1,4 @@
 @foreach($storeInfo as $item)
-<div class="section wb">
-    <div class="container">
         <div class="row">
             <div class="content col-md-8">
                 <div class="post-wrapper single-store">

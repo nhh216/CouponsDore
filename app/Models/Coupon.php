@@ -8,8 +8,8 @@ class Coupon extends Model
 {
     protected $table = 'coupons';
 
-    public static function getData(){
-        return self::select()->where()->limit()->get();
+    public static function getCouponLimit(){
+        return self::paginate(7);
     }
 
     public static function searchCoupon($str)
@@ -20,9 +20,13 @@ class Coupon extends Model
 
     public static function getStoreNameByID($id)
     {
-        return self::where('site_id',$id)->get();
-    }
+        return self::where('site_id',$id)->paginate(7);
+}
 
+    public function getHomePage()
+    {
+
+    }
 
     public function category()
     {
@@ -31,6 +35,6 @@ class Coupon extends Model
 
     public function site()
     {
-        return $this->belongsTo('App\Models\Site');
+        return $this->belongsTo(Site::class);
     }
 }

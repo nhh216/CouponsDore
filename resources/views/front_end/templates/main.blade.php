@@ -10,15 +10,14 @@
     @include('front_end.layout.header_home_content')
 
     <div class="section wb">
-        <div class="container">
+
             {{--Slider--}}
-             @includeWhen([$hasSlider],'front_end.layout.slider')
+            @includeWhen([$hasSlider],'front_end.layout.slider')
             {{--Content--}}
             @yield('content')
             {{-- Sidebar--}}
             @yield('sidebar')
 
-        </div>
     </div>
 </body>
     @include('front_end.includes.scripts_bottom')
