@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Request;
-use App\Models\Coupon;
+use Excel;
 use App\Models\Site;
+use App\Models\Coupon;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Storage;
 use DateTime;
 include ('simple_html_dom.php');
 
@@ -79,12 +78,15 @@ class HomePageController extends Controller
 
         $reponse2 = $client->get('https://pub.masoffer.com/promotion?layout=table&q=%2Fpromotion&export=xls',['cookies' => $cookieJar]);
         $result = $reponse2->getBody()->getContents();
-        $file = file_put_contents(storage_path('data/data-'.$time->format('d-m-y').'.xls'),$result);
+        $file = file_put_contents(storage_path('data/data.xls'),$result);
+        $filebackup = file_put_contents(storage_path('data/data-'.$time->format('d-m-y').'.-backup.xls'),$result);
 
     }
 
     public function check()
     {
+
+        Excel::load('storage/data/data.xls', function($reader) {})->get();
 
     }
 
