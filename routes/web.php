@@ -17,6 +17,7 @@ Route::get('/store/{name}-{id}','HomePageController@showStore');
 Route::get('/coupon-single.html','HomePageController@Single_coupon');
 Route::get('/autocomplete',array('as'=>'autocomplete','uses'=>'HomePageController@autocomplete'));
 Route::get('/db', 'HomePageController@test');
+Route::get('/db2', 'HomePageController@check');
 Route::get('/login','AdminController@showLogin');
 //Route::post('/admin',array('as'=>'login','uses'=>'AdminController@doLogin'));
 Route::post('/quantri','AdminController@doLogin')->name('login');

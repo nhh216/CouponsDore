@@ -7,9 +7,14 @@ use App\Models\Coupon;
 use App\Models\Site;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Storage;
+use DateTime;
+include ('simple_html_dom.php');
 
 class HomePageController extends Controller
 {
+
     public function home()
     {
 
@@ -57,11 +62,32 @@ class HomePageController extends Controller
 
     public function test()
     {
-        $site = new Site();
-        $site->coupons()->select('*')->get();
-        dd($site);
+        $time = new DateTime();
+        $username = 'b0ybg';
+        $password = 'Huyhung~12';
+        $client = new Client();
+        $cookieJar = new \GuzzleHttp\Cookie\CookieJar();
+        $client->post('https://pub.masoffer.com/sign-in',[
+            'form_params'=>[
+                'username' => $username,
+                'password' => $password,
+                'action'   => 'https://pub.masoffer.com/sign-in'
+            ],
+                'cookies' => $cookieJar
+         ]
+         );
+
+        $reponse2 = $client->get('https://pub.masoffer.com/promotion?layout=table&q=%2Fpromotion&export=xls',['cookies' => $cookieJar]);
+        $result = $reponse2->getBody()->getContents();
+        $file = file_put_contents(storage_path('data/data-'.$time->format('d-m-y').'.xls'),$result);
+
+    }
+
+    public function check()
+    {
 
     }
 
 }
 
+//label[class="push-10-r"]

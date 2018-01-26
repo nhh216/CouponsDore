@@ -22,14 +22,7 @@ class CrateSlugTable extends Migration
                 $val->save();
             }
         });
-        Schema::table('coupons', function (Blueprint $table) {
-            $list = App\Models\Coupon::all();
-            foreach($list as $val) {
-                $val->slug = str_slug($val->name, '-').'-'.$val->id;
-                $val->save();
-            }
-        });
-    }
+        }
 
     /**
      * Reverse the migrations.
