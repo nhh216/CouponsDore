@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Excel;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Site;
 use App\Models\Coupon;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 use GuzzleHttp\Client;
 use DateTime;
-include ('simple_html_dom.php');
+
 
 class HomePageController extends Controller
 {
@@ -86,10 +86,7 @@ class HomePageController extends Controller
     public function check()
     {
 
-        Excel::load('storage/data/data.xls', function($reader) {})->get();
-
+       print_r(Excel::load('storage/data/data.xls', function($reader) {})->get()) ;
     }
 
 }
-
-//label[class="push-10-r"]
