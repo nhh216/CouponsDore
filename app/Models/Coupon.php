@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use  Illuminate\Support\Facades\DB;
 
 class Coupon extends Model
 {
@@ -21,7 +22,12 @@ class Coupon extends Model
     public static function getStoreNameByID($id)
     {
         return self::where('site_id',$id)->paginate(7);
-}
+    }
+
+    public static function insertIntoCoupons($array = array() )
+    {
+        return DB::table('coupons')->insert($array);
+    }
 
     public function getHomePage()
     {

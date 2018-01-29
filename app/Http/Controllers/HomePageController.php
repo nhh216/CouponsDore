@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 use GuzzleHttp\Client;
 use DateTime;
+use Illuminate\Support\Collectio;
 
 
 class HomePageController extends Controller
@@ -59,7 +60,7 @@ class HomePageController extends Controller
         return response()->json($result);
     }
 
-    public function test()
+    public function test() // login to massoffer an download data.xls
     {
         $time = new DateTime();
         $username = 'b0ybg';
@@ -83,10 +84,80 @@ class HomePageController extends Controller
 
     }
 
-    public function check()
+    public function check() //  read and import data custormed to DB
     {
 
-       print_r(Excel::load('storage/data/data.xls', function($reader) {})->get()) ;
+        $data =   Excel::load('storage/data/data.xls', function($reader) {})->get() ;
+        if($data->count())
+        {
+            $i=0;
+            foreach ($data as $key => $value)
+            {
+                 $site_id = Site::getIdByShortName ($value->offer_id);
+                 if($value->nganh_hang == '')
+                 {
+                     $cat_id =Category::getCatIdByName('Các Ngành Hàng');
+                 }
+                else
+                {
+                     $cat_id = Category::getCatIdByName($value->nganh_hang);
+                }
+                if (Category::getCatIdByName($value->nganh_hang)== null)
+                {
+                    $cat_id =Category::getCatIdByName('Tổng Hợp');
+                }
+                foreach ($cat_id as $c)
+                {
+
+                    if($c == null)
+                    {
+                        $c_id = '';
+                    }else
+                    {
+                        $c_id = $c->id;
+                    }
+
+                    foreach ($site_id as $v)
+                    {
+
+                        if($v == '')
+                        {
+                            $s_id = '';
+                        }else
+                        {
+                            $s_id = $v->id;
+                        }
+                             $arr[] = [
+                                'category_id'=>$c_id,
+                                 'code'=>$value->ma_giam_gia,
+                                 'description'=>$value->mo_ta,
+                                 'exp_date'=>$value->end,
+                                 'link_offer'=>$value->link_phan_phoi,
+                                 'site_id'=>$s_id,
+                                 'title'=>$value->campaign,
+                            ];
+
+                    }
+                 }
+
+               }
+        }
+        Coupon::insertIntoCoupons($arr);
+
     }
+
+    public  function abc()
+    {
+        $coupon = Coupon::all();
+        foreach ($coupon as $k )
+        {
+            echo $k->Site->link_offer. '<br>';
+        }
+
+
+    }
+
+
+
 
 }

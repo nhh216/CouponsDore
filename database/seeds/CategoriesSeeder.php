@@ -20,37 +20,82 @@ class CategoriesSeeder extends Seeder
                 'name'=>'Danh Mục'
 
             ],
+            [
+                'id'=>'2',
+                'name'=>'Tổng hợp',
+                'parent_id'=>'1'
+            ],
 
-                [
-                    'id'=>'9',
-                    'name'=>'Ẩm Thực',
-                    'parent_id'=>'1'
-                ],
-                [
-                    'id'=>'10',
-                    'name'=>'Công Nghệ',
-                    'parent_id'=>'1'
-                ],
-                [
-                    'id'=>'11',
-                    'name'=>'Gia Dụng',
-                    'parent_id'=>'1'
-                ],
-                [
-                    'id'=>'12',
-                    'name'=>'Mẹ và Bé',
-                    'parent_id'=>'1'
-                ],
-                [
-                    'id'=>'13',
-                    'name'=>'Thời Trang',
-                    'parent_id'=>'1'
-                ],
-                [
-                    'id'=>'14',
-                    'name'=>'Văn Phòng Phẩm',
-                    'parent_id'=>'1'
-                ],
+            [
+                'id'=>'9',
+                'name'=>'Ẩm Thực',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'10',
+                'name'=>'Công Nghệ',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'11',
+                'name'=>'Gia Dụng',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'12',
+                'name'=>'Mẹ và Bé',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'13',
+                'name'=>'Thời Trang',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'14',
+                'name'=>'Văn Phòng Phẩm',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'15',
+                'name'=>'Du lịch',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'16',
+                'name'=>'Travel',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'17',
+                'name'=>'Điện tử',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'18',
+                'name'=>'Nhà cửa và đời sống',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'19',
+                'name'=>'Điện gia dụng',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'21',
+                'name'=>'Phụ kiện',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'22',
+                'name'=>'Dịch vụ',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'23',
+                'name'=>'Các Ngành Hàng',
+                'parent_id'=>'1'
+            ],
 
 
 

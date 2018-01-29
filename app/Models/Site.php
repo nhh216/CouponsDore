@@ -21,6 +21,17 @@ class Site extends Model
     {
         return self::select('id','name','logo','slug')->where('name','like','%'.$str.'%')->get();
     }
+
+    public static function getIdByShortName($name)
+    {
+        return self::select('id')->where('short_name','like',$name)->get();
+    }
+
+    public static function getLogoById($id)
+    {
+
+    }
+
     public  function coupons()
     {
         return $this->hasMany(Coupon::class);

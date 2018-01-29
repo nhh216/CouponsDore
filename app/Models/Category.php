@@ -15,6 +15,10 @@ class Category extends Model
     public static function getData(){
         return self::select()->where()->limit()->get();
     }
+    public  static function getCatIdByName($name)
+    {
+        return self::select('id')->where('name',$name)->get();
+    }
 
     public static  function subMenu($data,$id)
     {
@@ -30,7 +34,6 @@ class Category extends Model
         }
         echo "</ul>";
     }
-
 
     public function coupon()
     {

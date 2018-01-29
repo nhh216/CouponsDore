@@ -21,3 +21,4 @@ Route::get('/db2', 'HomePageController@check');
 Route::get('/login','AdminController@showLogin');
 //Route::post('/admin',array('as'=>'login','uses'=>'AdminController@doLogin'));
 Route::post('/quantri','AdminController@doLogin')->name('login');
+Route::get('/abc','HomePageController@abc');

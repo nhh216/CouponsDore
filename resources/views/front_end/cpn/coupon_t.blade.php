@@ -5,11 +5,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="post-media text-center">
                         <a a href="#ma-giam-gia-{{$coupon->id}}" class="code-link"
-                           data-ex-link="{{$coupon->site->homepage}}"><img src="{{asset($coupon->thumb)}}" alt=""
+                           data-ex-link="{{$coupon->link_offer}}"><img src="{{asset('/').$coupon->site->logo}}" alt=""
                                                                            class="img-responsive"></a>
                         <hr>
                         <div class="showcode">
-                            <a href="#" class="code-link" data-ex-link="{{$coupon->site->homepage}}">
+                            <a href="#" class="code-link" data-ex-link="{{$coupon->link_offer}}">
                                 <span class="coupon-code">{{$coupon->code}}</span>
                                 <span class="show-code">Lấy Mã</span>
                             </a>
@@ -35,7 +35,7 @@
                             </div>
                         </div><!-- end coupon-top -->
                         <h4><a href="#ma-giam-gia-{{$coupon->id}}" class="code-link"
-                               data-ex-link="{{$coupon->site->homepage}}">{{$coupon->title}}</a></h4>
+                               data-ex-link="{{$coupon->link_offer}}">{{$coupon->title}}</a></h4>
                         <p>{{$coupon->description}}</p>
                     </div><!-- end meta -->
 
@@ -61,7 +61,7 @@
                                 <div class="col-md-4">
                                     <img src="{{asset($coupon->thumb)}}" alt="" class="img-responsive">
                                     <div class="modal-button">
-                                        <a href="{{$coupon->site->homepage}}" target="_blank" title=""
+                                        <a href="{{$coupon->link_offer}}" target="_blank" title=""
                                            class="btn btn-default btn-block">Mua Hàng<i
                                                     class="fa fa-angle-right"></i></a>
                                     </div>
