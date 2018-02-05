@@ -9,6 +9,11 @@ class Site extends Model
     //
     protected $table = 'sites';
 
+    public static function getAllStores()
+    {
+        return self::select('id','name','slug')->get();
+    }
+
     public static function getInfoStoreByID($id)
     {
         return self::where('id',$id)->get();

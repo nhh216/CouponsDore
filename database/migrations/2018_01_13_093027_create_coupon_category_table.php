@@ -13,7 +13,8 @@ class CreateCouponCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('coupon_category', function (Blueprint $table) {
+        Schema::dropIfExists('category_coupon');
+        Schema::create('category_coupon', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('coupon_id');
             $table->integer('category_id');
@@ -28,6 +29,6 @@ class CreateCouponCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coupon_category');
+        Schema::dropIfExists('category_coupon');
     }
 }

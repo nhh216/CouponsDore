@@ -17,15 +17,26 @@ class CategoriesSeeder extends Seeder
         $catList=[
             [
                 'id'=>'1',
+
                 'name'=>'Danh Mục'
 
             ],
             [
                 'id'=>'2',
-                'name'=>'Tổng hợp',
+                'name'=>'Sách',
                 'parent_id'=>'1'
-            ],
 
+            ],
+            [
+                 'id'=>'4',
+                 'name'=>'Nội thất',
+                 'parent_id'=>'1'
+            ],
+             [
+                 'id'=>'5',
+                 'name'=>'Điện thoại di động',
+                 'parent_id'=>'1'
+             ],
             [
                 'id'=>'9',
                 'name'=>'Ẩm Thực',
@@ -96,6 +107,18 @@ class CategoriesSeeder extends Seeder
                 'name'=>'Các Ngành Hàng',
                 'parent_id'=>'1'
             ],
+            [
+                'id'=>'24',
+                'name'=>'Tổng Hợp',
+                'parent_id'=>'1'
+            ],
+            [
+                'id'=>'25',
+                'name'=>'Khác',
+                'parent_id'=>'1'
+            ],
+
+
 
 
 

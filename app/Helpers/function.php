@@ -1,4 +1,5 @@
 <?php
+
 function subMenu($data,$id)
 {
     $baseURl = asset('/');
@@ -13,4 +14,3 @@ function subMenu($data,$id)
         }
     }
 }
-?>

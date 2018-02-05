@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use  Illuminate\Support\Facades\DB;
 
+
 class Coupon extends Model
 {
     protected $table = 'coupons';
 
     public static function getCouponLimit(){
-        return self::paginate(7);
+        return self::paginate(15);
     }
 
     public static function searchCoupon($str)
@@ -18,10 +19,9 @@ class Coupon extends Model
         return self::select('id','title','code')->where('title','like','%'.$str.'%')->get();
     }
 
-
     public static function getStoreNameByID($id)
     {
-        return self::where('site_id',$id)->paginate(7);
+        return self::where('site_id',$id)->paginate(15);
     }
 
     public static function insertIntoCoupons($array = array() )
@@ -29,14 +29,27 @@ class Coupon extends Model
         return DB::table('coupons')->insert($array);
     }
 
-    public function getHomePage()
+    public static function checkExisted($title)
     {
-
+        $check = self::where('title',$title)->count();
+        if($check ==0 )
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
-    public function category()
+    public static  function getIdByTitle($title)
     {
-        return $this->belongsToMany('App\Models\Category');
+        return self::select('id')->where('title',$title)->get();
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany('App\Models\Category','category_coupon','coupon_id','category_id');
     }
 
     public function site()

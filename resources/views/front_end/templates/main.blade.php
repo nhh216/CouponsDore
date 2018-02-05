@@ -6,6 +6,7 @@
     @include('front_end.includes.scripts_search')
     @stack('head')
 </head>
+    @include('front_end.cpn.comment_fb')
 <body>
     @include('front_end.layout.header_home_content')
 
@@ -19,6 +20,7 @@
             @yield('sidebar')
 
     </div>
+
 </body>
     @include('front_end.includes.scripts_bottom')
     @stack('tail')

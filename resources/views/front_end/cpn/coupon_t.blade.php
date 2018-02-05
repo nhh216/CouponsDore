@@ -5,15 +5,24 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="post-media text-center">
                         <a a href="#ma-giam-gia-{{$coupon->id}}" class="code-link"
-                           data-ex-link="{{$coupon->link_offer}}"><img src="{{asset('/').$coupon->site->logo}}" alt=""
+                           data-ex-link="{{$coupon->link_offer}}"><img class="img-coupons" src="{{asset('/').$coupon->site->logo}}" alt=""
                                                                            class="img-responsive"></a>
-                        <hr>
-                        <div class="showcode">
-                            <a href="#" class="code-link" data-ex-link="{{$coupon->link_offer}}">
-                                <span class="coupon-code">{{$coupon->code}}</span>
-                                <span class="show-code">Lấy Mã</span>
-                            </a>
-                        </div><!-- end showcode -->
+                        <hr style="margin-top: 8px; margin-bottom: 10px;">
+
+                                @if(isset($coupon->code))
+                                    <div class="showcode">
+                                        <a href="#" class="code-link" data-ex-link="{{$coupon->link_offer}}">
+                                            <span class="coupon-code">{{$coupon->code}}</span>
+                                            <span class="show-code">Lấy Mã</span>
+                                        </a>
+                                    </div><!-- end showcode -->
+                                @else
+                                    <div class="showcode">
+                                        <a href="#" class="code-link" data-ex-link="{{$coupon->link_offer}}">
+                                             <span class="show-code">Mua Hàng</span>
+                                        </a>
+                                    </div>
+                                @endif
 
                     </div><!-- end media -->
                 </div><!-- end col -->
@@ -38,8 +47,6 @@
                                data-ex-link="{{$coupon->link_offer}}">{{$coupon->title}}</a></h4>
                         <p>{{$coupon->description}}</p>
                     </div><!-- end meta -->
-
-
                     <div class="coupon-bottom clearfix" style="border-top: 1px solid #2e6da4;">
                         <small class="pull-left"></small>
                         <small class="pull-right"><a href="store-single.html"><i class="fa fa-comment-o"></i> 12
@@ -59,7 +66,7 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img src="{{asset($coupon->thumb)}}" alt="" class="img-responsive">
+                                    <img src="{{asset('/').$coupon->site->logo}}" alt="" class="img-responsive">
                                     <div class="modal-button">
                                         <a href="{{$coupon->link_offer}}" target="_blank" title=""
                                            class="btn btn-default btn-block">Mua Hàng<i
@@ -111,10 +118,14 @@
                                         </div><!-- end coupon-meta -->
                                     </div><!-- end col -->
                                     <div class="col-md-8 text-center">
-                                        <button data-clipboard-text="{{$coupon->code}}"
-                                                class="coupon-code btn btn-primary btn-block" type="submit"
-                                                title="Click to Copy">{{$coupon->code}}</button>
-                                        <small>Lấy Mã</small>
+                                        @if(isset($coupon->code))
+                                            <button data-clipboard-text="{{$coupon->code}}"
+                                                    class="coupon-code btn btn-primary btn-block" type="submit"
+                                                    title="Click to Copy">{{$coupon->code}}</button>
+                                            <small>Clik vào để copy mã</small>
+                                         @else
+
+                                         @endif
                                     </div>
                                 </div><!-- end row -->
                             </div><!-- end coupon-area -->

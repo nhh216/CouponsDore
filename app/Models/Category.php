@@ -20,23 +20,13 @@ class Category extends Model
         return self::select('id')->where('name',$name)->get();
     }
 
-    public static  function subMenu($data,$id)
+    public static function getCouponsByCategory($id)
     {
-        echo "ul";
-        foreach ($data as $item)
-        {
-            if($item['parent_id']==$id)
-            {
-                echo '<li><a href="" ';
-                subMenu($data,$item['id']);
-                echo '</li>';
-            }
-        }
-        echo "</ul>";
+        
     }
 
-    public function coupon()
+    public function coupons()
     {
-        return $this->belongsToMany('App\Models\Coupon','category_coupon','category_id','coup');
+        return $this->belongsToMany('App\Models\Coupon', 'category_coupon', 'category_id', 'coupon_id');
     }
 }

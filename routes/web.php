@@ -13,7 +13,7 @@
 
 Route::get('/admin','AdminController@index');
 Route::get('/','HomePageController@home');
-Route::get('/store/{name}-{id}','HomePageController@showStore');
+Route::get('/store/{name}-{id}','HomePageController@showCouponsByStore');
 Route::get('/coupon-single.html','HomePageController@Single_coupon');
 Route::get('/autocomplete',array('as'=>'autocomplete','uses'=>'HomePageController@autocomplete'));
 Route::get('/db', 'HomePageController@test');

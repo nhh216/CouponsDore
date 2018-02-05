@@ -1784,7 +1784,7 @@ li.dropdown.userpanel a.dropdown-toggle {
 }
 
 hr {
-    border-color: #f0efef;
+    border-color: #f0c04f;
 }
 
 .customlist li:last-child {
@@ -2446,6 +2446,7 @@ small {
 }
 
 .post-media img {
+
     width: 100%;
     position: relative;
     -webkit-transition: all 0.5s ease 0s;
@@ -2454,8 +2455,20 @@ small {
     transition: all 0.5s ease 0s;
     background-color: #f3f6f9;
     padding: 3px;
-    position: relative;
+
+}
+
+.post-media .img-coupons {
+    height: 100px;
     width: 100%;
+    position: relative;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    background-color: #f3f6f9;
+    padding: 3px;
+
 }
 
 .promo-desc img {
@@ -2576,6 +2589,14 @@ small {
 .list-wrapper .modal .showcode {
     padding: 0 !important;
     background-color: #111 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.list-wrapper .modal .buy {
+    padding: 0 !important;
+    background-color: #f07744 !important;
     max-width: 100% !important;
     width: 100% !important;
     text-align: center !important;
