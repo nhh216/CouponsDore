@@ -21,7 +21,7 @@ class CreateCouponsTable extends Migration
             $table->integer('category_id')->nullable();
             $table->integer('site_id')->nullable();
             $table->integer('type')->nullable();
-            $table->string('link_offer')->nullable();
+            $table->string('link_offer',1000)->nullable();
             $table->string('description')->nullable();
             $table->string('exp_date')->nullable();
             $table->string('thumb')->nullable();

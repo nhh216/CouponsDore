@@ -36,7 +36,7 @@ class HomePageController extends Controller
 
     public function showCouponsByStore($name, $id)
     {
-        $data['catList'] = $this->categories();
+        $data['catList'] = $this->categories;
         $data['siteList'] = Site::getAllStores();
         $data['listcoupons'] = Coupon::getStoreNameByID($id);
         $data['storeInfo'] = Site::getInfoStoreByID($id);
@@ -86,12 +86,10 @@ class HomePageController extends Controller
                         ];
                     }
                 }
-
-
             }
         }
         dd($arr);
-       Category_Coupon::insertIntoCategoryCoupon($arr);
+//        Category_Coupon::insertIntoCategoryCoupon($arr);
     }
 
     public function check()

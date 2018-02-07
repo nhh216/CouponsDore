@@ -46,7 +46,7 @@
     STARTUP
 ******************************************/
 * {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Roboto Slab', serif;
 
 }
 body {
@@ -202,13 +202,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Source Sans Pro', arial, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-
-/******************************************
-    WP CORE
-******************************************/
 
 .first {
     clear: both
@@ -838,7 +834,7 @@ a img.aligncenter {
 }
 
 .navbar-default .navbar-nav > li {
-    margin-right: 2px;
+    margin-right: 10px;
 }
 
 .navbar-default .navbar-nav > li > a {

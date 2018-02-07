@@ -124,15 +124,9 @@ class CategoriesSeeder extends Seeder
 
         ];
 
-        $list = Category::all();
-        foreach($list as $val) {
-            $val->slug = str_slug($val->name, '-').'-'.$val->id;
-            $val->save();
-        }
-
-        foreach ($catList as $value)
-        {
-            DB::table('categories')->insert($value);
+        foreach($catList as $record) {
+            $record['slug'] = str_slug($record['name'],'-').'-'.$record['id'];
+            Category::create($record);
         }
 
     }

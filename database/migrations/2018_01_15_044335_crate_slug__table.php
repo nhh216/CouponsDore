@@ -20,8 +20,9 @@ class CrateSlugTable extends Migration
             foreach($list as $val) {
                 $val->slug = str_slug($val->name, '-').'-'.$val->id;
                 $val->save();
-            }
+                }
         });
+
         }
 
     /**

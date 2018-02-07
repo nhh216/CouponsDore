@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Site;
 
 class SitesSeeder extends Seeder
 {
@@ -132,9 +133,9 @@ class SitesSeeder extends Seeder
 
         ];
 
-        foreach ($data as $value)
-        {
-            DB::table('sites')->insert($value);
+        foreach($data as $record) {
+            $record['slug'] = str_slug($record['name'],'-').'-'.$record['id'];
+            Site::create($record);
         }
 
     }

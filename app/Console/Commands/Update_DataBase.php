@@ -101,27 +101,42 @@ class Update_DataBase extends Command
     }
 
     public function importToCCTable()
-    {
-        $data =   Excel::load('storage/data/data.xls', function($reader) {})->get() ;
-        $arrCC = array();
+    { $data =   Excel::load('storage/data/data.xls', function($reader) {})->get() ;
+        $arr= array();
+
         if($data->count())
         {
             foreach ($data as $key => $value)
             {
-                $arrCC [] = [
-                    'coupon_id'=>$value->id,
-                    'category_id'=>$value->category_id,
-                ];
+                $coup_id = Coupon::getIdByTitle($value->campaign);
+                $cat_id = Category::getCatIdByName($value->nganh_hang);
+                if($value->nganh_hang == '')
+                {
+                    $cat_id = Category::getCatIdByName('Khác');
+                }
+
+                foreach ($coup_id as $c)
+                {
+                    foreach ($cat_id as $c2)
+                    {
+                        $arr[] = [
+                            'coupon_id' =>$c->id,
+                            'category_id'=>$c2->id,
+                        ];
+                    }
+                }
+
+
             }
         }
-        Category_Coupon::insertIntoCategoryCoupon($arrCC);
+        Category_Coupon::insertIntoCategoryCoupon($arr);
     }
 
     public function handle()
     {
         $this->downloadData();
         $this->importDataToDB();
-//        $this->importToCCTable();
+        $this->importToCCTable();
     }
 
 }

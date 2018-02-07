@@ -3,18 +3,32 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cocur\Slugify\SlugifyInterface;
+
 
 class Category extends Model
 {
     protected $table = 'categories';
-    protected $slug = array(
+
+    protected $sluggable = array(
         'build_from'=>'name',
         'save_to'=>'slug'
     );
+    use Sluggable;
+    public function sluggable()
+    {
+        return [
+            'slug'=>[
+                'source' => 'name'
+            ]
+        ];
+    }
 
     public static function getData(){
         return self::select()->where()->limit()->get();
     }
+
     public  static function getCatIdByName($name)
     {
         return self::select('id')->where('name',$name)->get();
@@ -22,7 +36,7 @@ class Category extends Model
 
     public static function getCouponsByCategory($id)
     {
-        
+
     }
 
     public function coupons()

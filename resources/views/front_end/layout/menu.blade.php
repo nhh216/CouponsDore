@@ -6,24 +6,23 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a class="active" href="{{url('/')}}" title="">Trang Chủ</a></li>
-                        @foreach($catList as $item)
+                           @foreach($catList as $item)
                             @if($item['parent_id']==0)
                                 <li class="dropdown hasmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down">{{$item['name']}}</span></a>
                                     <ul class="dropdown-menu" role="menu">
                                         {{ subMenu($catList,$item['id']) }}
-
                                     </ul>
                                 </li>
                             @endif
-                        @endforeach
+                            @endforeach
 
-                        <li class="dropdown hasmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down">Thương Hiệu</span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                @foreach($siteList as $value)
-                                    <li class="dropdown-menu-2"><a href="{{url('/')}}/store/{{$value->slug}}">{{$value->name}}</a></li>
-                                @endforeach
-                            </ul>
-                        </li>
+                            <li class="dropdown hasmenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-angle-down">Thương Hiệu</span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    @foreach($siteList as $value)
+                                        <li class="dropdown-menu-2"><a href="{{url('/')}}/store/{{$value->slug}}">{{$value->name}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
                     </ul>
                     {{--<ul class="nav navbar-nav navbar-right">--}}
                     {{--<ul class="nav navbar-nav navbar-right">--}}

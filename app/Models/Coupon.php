@@ -10,6 +10,7 @@ class Coupon extends Model
 {
     protected $table = 'coupons';
 
+
     public static function getCouponLimit(){
         return self::paginate(15);
     }
@@ -46,6 +47,14 @@ class Coupon extends Model
     {
         return self::select('id')->where('title',$title)->get();
     }
+
+    public static function getListBestStore()
+    {
+//        return self::select('site_id')->
+    }
+
+
+
 
     public function categories()
     {

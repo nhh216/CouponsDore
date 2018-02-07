@@ -23,6 +23,7 @@ class CreateSitesTable extends Migration
             $table->boolean('popular')->nullable();
             $table->string('slug')->nullable();
             $table->string('homepage')->nullable();
+            $table->timestamps();
         });
     }
 
