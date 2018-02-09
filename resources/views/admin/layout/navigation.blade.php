@@ -35,28 +35,7 @@
                                         </span>
                                     <span class="nav-text">Layout</span>
                                 </a>
-                                <ul class="nav-sub">
-                                    <li>
-                                        <a href="layout.header.html">
-                                            <span class="nav-text">Header</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout.sidenav.html">
-                                            <span class="nav-text">Sidenav</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout.aside.html">
-                                            <span class="nav-text">Aside</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="layout.flex.html">
-                                            <span class="nav-text">Flex</span>
-                                        </a>
-                                    </li>
-                                </ul>
+
                             </li>
 
                             <li>
