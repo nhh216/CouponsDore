@@ -13,6 +13,7 @@ class ModuleProvider
 {
     public function boot()
     {
+        $this->loadRoutesFrom(YOURCOUPON_PATH.'Frontend/route.php');
 
     }
 

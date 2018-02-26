@@ -165,7 +165,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Core\Providers::class,
+        Core\CoreProvider::class,
 
 
         /*

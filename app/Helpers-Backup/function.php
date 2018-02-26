@@ -1,5 +1,6 @@
 <?php
-
+define("YOURCOUPON_CORE", realpath(__DIR__)."/");
+define("YOURCOUPON_PATH", realpath(YOURCOUPON_CORE."../yourcoupon")."/");
 function subMenu($data,$id)
 {
     $baseURl = asset('/');
