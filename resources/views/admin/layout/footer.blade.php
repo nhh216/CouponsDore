@@ -1,7 +1,14 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: nhh21
- * Date: 1/11/2018
- * Time: 1:00 AM
- */
+            </div>
+         </div>
+     {{--</div>--}}
+    </div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.4.0
+        </div>
+        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+        reserved.
+    </footer>
+<div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->

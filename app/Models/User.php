@@ -9,5 +9,9 @@ class User extends Model
     //
     protected $table = 'users';
 
+    public  static  function getPaswordKey($email)
+    {
+        return self::select('password')->where('email',$email)->get();
+    }
 
 }
