@@ -3,6 +3,11 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
+            @if(Session::has('fail_to_login'))
+                <div class="alert alert-danger">
+                    {{Session::get('fail_to_login')}}
+                </div>
+            @endif
             <div class="d-flex flex-column flex" style="background-color: aliceblue; box-shadow: 5px px white;">
                 <div class="navbar light bg pos-rlt box-shadow">
                     <div class="mx-auto">

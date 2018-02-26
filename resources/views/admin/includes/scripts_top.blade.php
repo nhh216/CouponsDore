@@ -1,12 +1,17 @@
 <meta charset="utf-8">
-<title>Signin | Apply - Bootstrap 4 Web Application</title>
-<meta name="description" content="Responsive, Bootstrap, BS4">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimal-ui">
+<base href="{{ asset('') }}" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
-<link rel="apple-touch-icon" href="http://flatfull.com/themes/apply/assets/images/logo.svg">
-<meta name="apple-mobile-web-app-title" content="Flatkit">
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="{{asset('/')}}admin/libs/font-awesome/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="{{asset('/')}}admin/assets/css/app.min.css">
+<title>AdminLTE 2 | Dashboard</title>
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!-- Bootstrap 3.3.7 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">

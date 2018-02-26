@@ -1,0 +1,13 @@
+
+In Connection.php line 664:
+                                                                                                                       
+  SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.                   
+   (SQL: select count(*) as aggregate from `coupons` where `title` =  Quà tặng Valentine cho ngày hẹn hò, ưu đái tới   
+  50%)                                                                                                                 
+                                                                                                                       
+
+In Connector.php line 67:
+                                                                                                      
+  SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.  
+                                                                                                      
+

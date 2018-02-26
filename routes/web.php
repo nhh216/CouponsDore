@@ -11,14 +11,52 @@
 |
 */
 
-Route::get('/admin','AdminController@index');
-Route::get('/','HomePageController@home');
-Route::get('/store/{name}-{id}','HomePageController@showCouponsByStore');
-Route::get('/coupon-single.html','HomePageController@Single_coupon');
-Route::get('/autocomplete',array('as'=>'autocomplete','uses'=>'HomePageController@autocomplete'));
-Route::get('/db', 'HomePageController@test');
-Route::get('/db2', 'HomePageController@check');
-Route::get('/login','AdminController@showLogin');
+Route::get('/',[
+    'as'=>'homepage',
+    'uses'=>'HomePageController@home'
+]);
+
+Route::get('/store/{name}-{id}',[
+    'as'=>'stores',
+    'uses'=>'HomePageController@showCouponsByStore'
+]);
+
+Route::get('/coupon-single.html',[
+    'as'=>'single_coupon',
+    'uses'=>'HomePageController@Single_coupon'
+]);
+
+Route::get('/autocomplete',[
+    'as'=>'autocomplete',
+    'uses'=>'HomePageController@autocomplete'
+]);
+
+Route::get('/db','HomePageController@test');
+
 //Route::post('/admin',array('as'=>'login','uses'=>'AdminController@doLogin'));
-Route::post('/quantri','AdminController@doLogin')->name('login');
 Route::get('/abc','HomePageController@abc');
+
+Route::group(['middleware' => ['web']], function () {
+
+    Route::get('/login',[
+        'as'=>'get_form_login',
+        'uses'=>'AdminController@showLogin'
+    ]);
+
+    Route::post('/login',[
+        'as'=>'login',
+        'uses'=>'AdminController@doLogin'
+    ]);
+
+    Route::get('/admin/category',[
+        'as'=>'admin_category',
+        'uses'=>'AdminController@editCategory'
+    ]);
+
+    Route::get('/admin/home',[
+        'as'=>'admin_page',
+        'uses'=>'AdminController@index'
+    ]);
+
+});
+
