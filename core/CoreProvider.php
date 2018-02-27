@@ -15,11 +15,14 @@ class CoreProvider extends ServiceProvider
 {
     public function boot()
     {
-
+        die(1);
     }
 
     public function register()
     {
+        die(YOURCOUPON_PATH);
+        $this->loadRoutesFrom(YOURCOUPON_PATH.'Frontend/route.php');
+        $this->loadViewsFrom(YOURCOUPON_PATH. 'Frontend/Views', 'frontend');
         $this->app->register(ModuleProvider::class);
     }
 }

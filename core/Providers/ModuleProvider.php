@@ -8,17 +8,21 @@
 
 namespace Core\Providers;
 
+use Illuminate\Support\ServiceProvider;
 
-class ModuleProvider
+
+class ModuleProvider extends ServiceProvider
 {
-    public function boot()
-    {
-        $this->loadRoutesFrom(YOURCOUPON_PATH.'Frontend/route.php');
-
-    }
 
     public function register()
     {
 
     }
+
+    public function boot()
+    {
+        $this->loadRoutesFrom(YOURCOUPON_PATH.'Frontend/route.php');
+        $this->loadViewsFrom(YOURCOUPON_PATH. 'Frontend/Views', 'frontend');
+    }
+
 }

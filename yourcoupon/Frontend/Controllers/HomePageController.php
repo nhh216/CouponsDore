@@ -62,34 +62,7 @@ class HomePageController extends Controller
 
     public function test()
     {
-        $data =   Excel::load('storage/data/data.xls', function($reader) {})->get() ;
-        $arr= array();
 
-        if($data->count())
-        {
-            foreach ($data as $key => $value)
-            {
-                $coup_id = Coupon::getIdByTitle($value->campaign);
-                $cat_id = Category::getCatIdByName($value->nganh_hang);
-                if($value->nganh_hang == '')
-                {
-                    $cat_id = Category::getCatIdByName('Khác');
-                }
-
-                foreach ($coup_id as $c)
-                {
-                    foreach ($cat_id as $c2)
-                    {
-                        $arr[] = [
-                            'coupon_id' =>$c->id,
-                            'category_id'=>$c2->id,
-                        ];
-                    }
-                }
-            }
-        }
-        dd($arr);
-//        Category_Coupon::insertIntoCategoryCoupon($arr);
     }
 
     public function check()
