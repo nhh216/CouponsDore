@@ -20,7 +20,7 @@ class CoreProvider extends ServiceProvider
 
     public function register()
     {
-        die(YOURCOUPON_PATH);
+//        die(YOURCOUPON_PATH);
         $this->loadRoutesFrom(YOURCOUPON_PATH.'Frontend/route.php');
         $this->loadViewsFrom(YOURCOUPON_PATH. 'Frontend/Views', 'frontend');
         $this->app->register(ModuleProvider::class);

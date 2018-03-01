@@ -7,9 +7,10 @@ use Illuminate\Console\Command;
 use App\Models\Coupon;
 use App\Models\Site;
 use App\Models\Category;
-use Maatwebsite\Excel\Facades\Excel;
+use Excel;
 use GuzzleHttp\Client;
 use DateTime;
+
 class Update_DataBase extends Command
 {
 
@@ -40,6 +41,7 @@ class Update_DataBase extends Command
 
     public   function importDataToDB()
     {
+
         $data =   Excel::load('storage/data/data.xls', function($reader) {})->get() ;
         $arr = array();
         if($data->count())
@@ -101,7 +103,8 @@ class Update_DataBase extends Command
     }
 
     public function importToCCTable()
-    { $data =   Excel::load('storage/data/data.xls', function($reader) {})->get() ;
+    {
+        $data =   Excel::load('storage/data/data.xls', function($reader) {})->get() ;
         $arr= array();
 
         if($data->count())
@@ -125,8 +128,6 @@ class Update_DataBase extends Command
                         ];
                     }
                 }
-
-
             }
         }
         Category_Coupon::insertIntoCategoryCoupon($arr);

@@ -33,7 +33,7 @@ Route::get('/autocomplete',[
 Route::get('/db','HomePageController@test');
 
 //Route::post('/admin',array('as'=>'login','uses'=>'AdminController@doLogin'));
-Route::get('/abc','HomePageController@abc');
+Route::get('/test','HomePageController@check');
 
 Route::group(['middleware' => ['web']], function () {
 

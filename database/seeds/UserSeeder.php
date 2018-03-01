@@ -15,8 +15,9 @@ class UserSeeder extends Seeder
     public function run()
     {
         $data = [
-            'name'=>'huy hung',
+            'name'=>'Huy Hùng',
             'email'=>'nhh.216@gmail.com',
+            'full_name'=>'Nguyễn Huy Hùng',
             'password'=>\Illuminate\Support\Facades\Hash::make('admin123')
         ];
 
